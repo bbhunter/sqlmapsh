@@ -13,6 +13,12 @@ import (
 
 func main() {
 
+	// Check if sqlmap is installed
+	_, err := exec.LookPath("sqlmap")
+	if err != nil {
+		panic(err)
+	}
+
 	var (
 		dnsResolverIP        = "127.0.0.1:53" // SQLMap local DNS resolver.
 		dnsResolverProto     = "udp"          // Protocol to use for the DNS resolver

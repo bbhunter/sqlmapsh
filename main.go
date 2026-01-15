@@ -41,11 +41,14 @@ func main() {
 	URL := client.URL()
 
 	// Read from interactsh and forward to SQLMap local DNS server
-	client.StartPolling(time.Duration(interactshPollingTimeMs)*time.Millisecond, func(interaction *server.Interaction) {
+	err = client.StartPolling(time.Duration(interactshPollingTimeMs)*time.Millisecond, func(interaction *server.Interaction) {
 		if interaction.Protocol == "dns" {
 			dnsResolver.LookupHost(context.Background(), interaction.FullId)
 		}
 	})
+	if err != nil {
+		panic(err)
+	}
 	defer client.StopPolling()
 
 	// Wrap SQLMap adding DNS domain for exfiltration
